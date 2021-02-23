@@ -10,13 +10,18 @@ public class Main {
         shapes[2] = new Square(4);
 
 
-        Circle shape4 = new Circle(5);
-        Random generator = new Random(100);
+        Random generator = new Random();
         double value = generator.nextDouble();
          for (Shape shape : shapes){
-             System.out.println(shape);
+             System.out.println("Areabefor=:"+shape.getArea());
+             if (shape instanceof Colorable){
+                 ((Colorable) shape).howToColor();
+             }
+             System.out.println("Areaafter=:"+shape.reSize(value));
 
          }
 
+
+        }
+
     }
-}

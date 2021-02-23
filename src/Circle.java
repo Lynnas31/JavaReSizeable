@@ -39,6 +39,6 @@ public class Circle extends Shape implements Resizeable {
 
     @Override
     public double reSize(double n) {
-        return n*getArea();
+        return n*this.radius;
     }
 }
